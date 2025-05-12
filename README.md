@@ -2,55 +2,14 @@
 
 This project is a React and Laravel application that displays a paginated table of users with search, sort, and export-to-CSV functionality. It leverages a Laravel backend for data management and a React frontend for the user interface.
 
-## 📦 Features
+##  Features
 
 * **Pagination:** Navigate through users with customizable items per page.
 * **Search:** Filter users by name or email.
 * **Sorting:** Sort data by columns (ID, Name, Email, Verified).
 * **Export to CSV:** Download the displayed user data as a CSV file.
 
-
----
-
-## 🛠️ Installation
-
-1. **Clone the repository:**
-
-```bash
-git clone <repository-url>
-cd <repository-folder>
-```
-
-2. **Install Laravel dependencies:**
-
-```bash
-composer install
-cp .env.example .env
-php artisan key:generate
-```
-
-3. **Install Node.js dependencies:**
-
-```bash
-npm install
-```
-
-4. **Migrate and seed the database:**
-
-```bash
-php artisan migrate --seed
-```
-
-5. **Run the application:**
-
-```bash
-php artisan serve
-npm run dev
-```
-
----
-
-## 📂 File Structure
+##  File Structure
 
 ```
 ├── app
@@ -64,8 +23,8 @@ npm run dev
 │           ├── UserRow.tsx
 │           ├── SearchInput.tsx
 │           ├── TableHeader.tsx
-│           ├── PaginationControls.tsx
-│           └── utils
+│           └── PaginationControls.tsx
+│       └── utils
 │               └── exportToCSV.ts
 └── routes
     ├── api.php
@@ -74,11 +33,11 @@ npm run dev
 
 ---
 
-## 🚀 Usage
+## Usage
 
 1. **Navigate to the Home Page:**
 
-    * Visit `http://127.0.0.1:8000/` to view the paginated user table.
+    * Visit `http://127.0.0.1/` to view the paginated user table.
 
 2. **Search for Users:**
 
@@ -94,7 +53,7 @@ npm run dev
 
 ---
 
-## 📦 API Endpoints
+## API Endpoints
 
 * `GET /api/users`
 
@@ -108,7 +67,7 @@ npm run dev
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Laravel:** Backend framework
 * **React & TypeScript:** Frontend framework and type management
@@ -117,25 +76,9 @@ npm run dev
 
 ---
 
-## ✅ Future Enhancements
+## Future Enhancements
 
 * Column reordering
 * Advanced filtering
 * Dynamic column visibility
 * Enhanced CSV export with all pages
-
----
-
-## 🤝 Contributing
-
-* Fork the repository
-* Create a new branch: `git checkout -b feature-name`
-* Make changes and commit: `git commit -m 'Added feature'`
-* Push to branch: `git push origin feature-name`
-* Create a pull request
-
----
-
-## 📝 License
-
-This project is open-source and available under the [MIT License](LICENSE).
