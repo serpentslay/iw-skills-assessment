@@ -8,7 +8,23 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function getPaginatedUsers(Request $request)
+    /**
+     * Returns the users based on get inputs
+     * page: Current page number
+     *
+     * perPage: Items per page
+     *
+     * search: Search term
+     *
+     * sort: Sort column
+     *
+     * direction: Sort direction (asc or desc)
+     *
+     * @param Request $request
+     *
+     * @return mixed
+     */
+    public function getUsers(Request $request)
     {
 
         $perPage = $request->get('perPage', '');
@@ -29,8 +45,8 @@ class UserController extends Controller
             $query->orderBy("{$order}", "{$direction}");
         }
 
-        // Paginate the users
+
         $users = $query->paginate($perPage);
-        return $users; // Return paginated users
+        return $users;
     }
 }
